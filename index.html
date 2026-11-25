@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Misim.me</title>
+<meta name="description" content="">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Misim.me">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://misim.me/assets/mohammad.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="alternate" hreflang="ar" href="https://misim.me/?lang=ar">
+<link rel="alternate" hreflang="he" href="https://misim.me/?lang=he">
+<link rel="alternate" hreflang="en" href="https://misim.me/?lang=en">
+<link rel="alternate" hreflang="ru" href="https://misim.me/?lang=ru">
+<link rel="alternate" hreflang="x-default" href="https://misim.me/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+Hebrew:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AccountingService","name":"Misim.me","url":"https://misim.me/","image":"https://misim.me/assets/mohammad.jpg","telephone":"+972-4-830-6000","founder":{"@type":"Person","name":"Mohammad Masalha","jobTitle":"Auditor, senior economist and financing expert"},"address":{"@type":"PostalAddress","streetAddress":"35 Marj Ibn Amer St.","addressLocality":"Nazareth","addressCountry":"IL"},"sameAs":["https://facebook.com/misim.me","https://instagram.com/misim.me","https://www.youtube.com/@masalha","https://tiktok.com/@mmasalha"]}
+</script>
+<style>
+/* ---------- Tokens (skill B1 to B4) ---------- */
+:root{
+  --s-25:2px;--s-50:4px;--s-75:8px;--s-100:12px;--s-200:16px;--s-300:24px;--s-400:32px;--s-500:40px;--s-600:48px;--s-700:64px;--s-800:80px;--s-900:96px;
+  --r-md:6px;--r-lg:8px;--r-xl:12px;--r-2xl:16px;--r-3xl:24px;--r-full:9999px;
+  --bg:#FFFFFF;--surface:#F5F7FA;--ink:#0B1220;--muted:#5B6577;--line:#E3E8EF;
+  --brand:#0A4FB0;--brand-ink:#083C86;--brand-soft:#EAF2FD;--sky:#38B6FF;
+  --cta:#0E7A3E;--cta-hover:#0B6633;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+  --font:"Manrope","Noto Sans Hebrew","Noto Sans Arabic",system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--s-900);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1rem;line-height:1.5rem;font-weight:400;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+i.ph,i.ph-fill{display:inline-block;width:1em;height:1em;line-height:1;flex:none}
+ul{padding:0;list-style:none}
+h1,h2,h3,h4,.tagline{text-wrap:balance}
+p,li,dd{text-wrap:pretty}
+.ph,.ph-fill{font-style:normal;line-height:1}
+
+/* ---------- Named text styles (skill B1) ---------- */
+.heading-1{font-size:3.75rem;line-height:3.75rem;font-weight:600}
+.heading-2{font-size:3rem;line-height:3rem;font-weight:600}
+.heading-3{font-size:2.25rem;line-height:2.5rem;font-weight:600}
+.heading-4{font-size:1.875rem;line-height:2.25rem;font-weight:600}
+.heading-5{font-size:1.5rem;line-height:2rem;font-weight:600}
+.heading-6{font-size:1.25rem;line-height:1.75rem;font-weight:600}
+.title-1{font-size:1.25rem;line-height:1.75rem;font-weight:500}
+.title-2{font-size:1.125rem;line-height:1.75rem;font-weight:500}
+.title-3{font-size:1rem;line-height:1.5rem;font-weight:500}
+.title-4{font-size:.875rem;line-height:1.25rem;font-weight:500}
+.body-1{font-size:1rem;line-height:1.5rem;font-weight:600}
+.body-2{font-size:1rem;line-height:1.5rem;font-weight:500}
+.body-3{font-size:1rem;line-height:1.5rem;font-weight:400}
+.body-4{font-size:.875rem;line-height:1.25rem;font-weight:600}
+.body-6{font-size:.875rem;line-height:1.25rem;font-weight:400}
+.button-lg{font-size:1.125rem;line-height:1.75rem;font-weight:600}
+.button-md{font-size:1rem;line-height:1.5rem;font-weight:600}
+.button-sm{font-size:.875rem;line-height:1.25rem;font-weight:600}
+.caption-1{font-size:.875rem;line-height:1.25rem;font-weight:500}
+.caption-3{font-size:.75rem;line-height:1rem;font-weight:600}
+/* Arabic and Hebrew glyphs need taller line boxes than Latin at the same step */
+:lang(ar) :is(.heading-1,.heading-2,.heading-3,.heading-4){line-height:1.3}
+:lang(he) :is(.heading-1,.heading-2,.heading-3,.heading-4){line-height:1.15}
+@media (min-width:768px){:is(:lang(ar),:lang(he)) .hero h1.heading-1{font-size:3rem}}
+
+/* ---------- Layout ---------- */
+.container{max-width:1152px;margin-inline:auto;padding-inline:var(--s-300)}
+section{padding-block:var(--s-900)}
+.surface{background:var(--surface)}
+.eyebrow{display:inline-flex;align-items:center;gap:var(--s-75);color:var(--brand)}
+.section-head{max-width:680px;display:grid;gap:var(--s-200);margin-block-end:var(--s-600)}
+.section-head p{color:var(--muted)}
+.muted{color:var(--muted)}
+
+/* ---------- Buttons (skill B2, B9) ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-75);padding:var(--s-75) var(--s-100);border-radius:var(--r-xl);border:1px solid transparent;text-decoration:none;cursor:pointer;font-family:inherit;white-space:nowrap;
+  transition:transform 500ms var(--ease),background-color 300ms var(--ease),border-color 300ms var(--ease),color 300ms var(--ease)}
+.btn .ph,.btn .ph-fill{font-size:1.25rem}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(0.98)}
+.btn-primary{background:var(--cta);color:#fff}
+.btn-primary:hover{background:var(--cta-hover)}
+.btn-ghost{background:var(--bg);color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-lg{padding:var(--s-75) var(--s-200)}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:var(--r-lg)}
+.skip{position:absolute;inset-inline-start:var(--s-200);top:-100px;z-index:100;background:var(--ink);color:#fff;padding:var(--s-75) var(--s-100);border-radius:var(--r-xl);text-decoration:none}
+.skip:focus{top:var(--s-200)}
+
+/* ---------- Floating nav (skill B7 Navigation) ---------- */
+.nav{position:fixed;top:var(--s-200);inset-inline:0;z-index:50;display:flex;justify-content:center;padding-inline:var(--s-200);pointer-events:none}
+.nav-bar{pointer-events:auto;display:flex;align-items:center;gap:var(--s-300);padding:var(--s-75);padding-inline-start:var(--s-200);border-radius:var(--r-2xl);border:1px solid rgba(11,18,32,.08);
+  background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);box-shadow:0 8px 32px rgba(11,18,32,.08)}
+.brand{display:inline-flex;align-items:center;gap:var(--s-75);text-decoration:none;color:var(--ink)}
+.brand img{width:32px;height:32px;border-radius:var(--r-lg)}
+.brand b{font-weight:700}
+.brand span{color:var(--sky)}
+.nav-links{display:flex;gap:var(--s-50)}
+.nav-links a{padding:var(--s-75) var(--s-100);border-radius:var(--r-lg);text-decoration:none;color:var(--muted);transition:background-color 300ms var(--ease),color 300ms var(--ease)}
+.nav-links a:hover{background:rgba(11,18,32,.05);color:var(--ink)}
+.nav-links a[aria-current="true"]{color:var(--ink);background:rgba(11,18,32,.06)}
+.nav-tools{display:flex;align-items:center;gap:var(--s-50)}
+.icon-btn{display:inline-grid;place-items:center;gap:var(--s-50);grid-auto-flow:column;min-width:40px;height:40px;padding-inline:var(--s-75);border-radius:var(--r-lg);border:0;background:transparent;color:var(--ink);cursor:pointer;font-family:inherit;
+  transition:background-color 300ms var(--ease),transform 500ms var(--ease)}
+.icon-btn:hover{background:rgba(11,18,32,.06)}
+.icon-btn:active{transform:scale(0.98)}
+.icon-btn .ph{font-size:1.25rem}
+.pop{position:relative}
+.menu{position:absolute;top:calc(100% + var(--s-75));inset-inline-end:0;min-width:200px;padding:var(--s-75);border-radius:var(--r-2xl);background:#fff;border:1px solid var(--line);box-shadow:0 16px 48px rgba(11,18,32,.12);display:grid;gap:var(--s-25);
+  opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity 300ms var(--ease),transform 500ms var(--ease)}
+.menu.open{opacity:1;transform:none;pointer-events:auto}
+.menu button,.menu a{display:flex;align-items:center;justify-content:space-between;gap:var(--s-100);width:100%;padding:var(--s-75) var(--s-100);border-radius:var(--r-lg);border:0;background:transparent;color:var(--ink);cursor:pointer;font-family:inherit;text-align:start;text-decoration:none;transition:background-color 300ms var(--ease)}
+.menu button:hover,.menu a:hover{background:var(--surface)}
+.menu [aria-pressed="true"],.menu [aria-current="true"]{background:var(--brand-soft);color:var(--brand)}
+.menu .label{padding:var(--s-75) var(--s-100) var(--s-50);color:var(--muted)}
+.toggle{display:none}
+.toggle .bars{position:relative;width:20px;height:14px}
+.toggle .bars i{position:absolute;inset-inline:0;height:2px;border-radius:2px;background:currentColor;transition:transform 500ms var(--ease),opacity 300ms var(--ease)}
+.toggle .bars i:nth-child(1){top:2px}.toggle .bars i:nth-child(2){top:10px}
+.nav.is-open .toggle .bars i:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.nav.is-open .toggle .bars i:nth-child(2){transform:translateY(-4px) rotate(-45deg)}
+.panel{position:fixed;inset:0;z-index:40;padding:calc(var(--s-900) + var(--s-200)) var(--s-300) var(--s-400);display:flex;flex-direction:column;gap:var(--s-400);
+  background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);opacity:0;pointer-events:none;transition:opacity 300ms var(--ease)}
+.panel.open{opacity:1;pointer-events:auto}
+.panel nav{display:grid;gap:var(--s-75)}
+.panel nav a,.panel .panel-cta{opacity:0;transform:translateY(24px);transition:opacity 500ms var(--ease),transform 500ms var(--ease)}
+.panel nav a{padding:var(--s-100) 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);display:flex;justify-content:space-between;align-items:center}
+.panel.open nav a,.panel.open .panel-cta{opacity:1;transform:none}
+
+/* ---------- Hero (skill B5) ---------- */
+.hero{padding-block:calc(var(--s-900) + var(--s-700)) var(--s-800)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--s-700);align-items:center}
+.hero-copy{display:grid;gap:var(--s-300);justify-items:start}
+.hero h1{max-width:680px;padding-block:var(--s-50);background:linear-gradient(90deg,#000000,#666666);-webkit-background-clip:text;background-clip:text;color:transparent}
+[dir="rtl"] .hero h1{background-image:linear-gradient(270deg,#000000,#666666)}
+.hero .sub{max-width:680px;color:var(--muted)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-200)}
+.call-link{display:inline-flex;align-items:center;gap:var(--s-75);color:var(--muted);text-decoration:none;transition:color 300ms var(--ease)}
+.call-link b{color:var(--ink);direction:ltr;unicode-bidi:isolate}
+.call-link:hover{color:var(--ink)}
+.proof{display:flex;flex-wrap:wrap;gap:var(--s-75) var(--s-300);color:var(--muted)}
+.proof li{display:inline-flex;align-items:center;gap:var(--s-75)}
+.proof .ph-fill{color:var(--brand);font-size:1.125rem}
+.hero-visual{position:relative;justify-self:center;width:100%;max-width:420px}
+.photo{padding:var(--s-75);border-radius:var(--r-3xl);background:#fff;border:1px solid var(--line);box-shadow:0 24px 64px rgba(11,18,32,.12)}
+.photo img{border-radius:var(--r-2xl);aspect-ratio:4/4.4;object-fit:cover;object-position:top;width:100%}
+.chip{position:absolute;display:flex;align-items:center;gap:var(--s-100);padding:var(--s-100) var(--s-200);border-radius:var(--r-2xl);background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 12px 32px rgba(11,18,32,.12)}
+.chip-a{inset-inline-start:calc(-1 * var(--s-400));bottom:var(--s-600)}
+.chip-b{inset-inline-end:calc(-1 * var(--s-300));top:var(--s-400)}
+.chip .num{color:var(--brand)}
+.chip .ico{display:grid;place-items:center;width:40px;height:40px;border-radius:var(--r-xl);background:var(--brand-soft);color:var(--brand);font-size:1.25rem}
+
+/* ---------- Trust strip ---------- */
+.trust{padding-block:0 var(--s-800)}
+.trust ul{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-200)}
+.trust li{display:flex;align-items:center;gap:var(--s-100);padding:var(--s-200) var(--s-300);border:1px solid var(--line);border-radius:var(--r-2xl)}
+.trust .ph{font-size:1.5rem;color:var(--brand)}
+
+/* ---------- Services ---------- */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-200)}
+.card{display:grid;align-content:start;gap:var(--s-200);padding:var(--s-300);border-radius:var(--r-2xl);background:#fff;border:1px solid var(--line);transition:transform 500ms var(--ease),border-color 300ms var(--ease)}
+.card:hover{transform:translateY(-4px);border-color:#C5D3E6}
+.card .ico{display:grid;place-items:center;width:48px;height:48px;border-radius:var(--r-xl);background:var(--brand-soft);color:var(--brand);font-size:1.5rem}
+.card.feature{background:var(--brand);border-color:var(--brand);color:#fff}
+.card.feature .ico{background:rgba(255,255,255,.14);color:#fff}
+.card.feature p{color:#DCE8FA}
+
+/* ---------- Tagline reveal (skill B11) ---------- */
+.tagline-sec{padding-block:calc(var(--s-900) + var(--s-400))}
+.tagline{max-width:880px;margin-inline:auto;text-align:center}
+.tagline .w{color:rgba(11,18,32,.28);transition:color 500ms var(--ease)}
+.tagline .w.on{color:var(--ink)}
+
+/* ---------- How it works ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-300);counter-reset:step}
+.step{display:grid;gap:var(--s-200);padding:var(--s-300);border-radius:var(--r-2xl);background:#fff;border:1px solid var(--line)}
+.step .n{display:grid;place-items:center;width:40px;height:40px;border-radius:var(--r-full);background:var(--ink);color:#fff}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--s-700);align-items:center}
+.about-card{display:grid;gap:var(--s-300);padding:var(--s-400);border-radius:var(--r-3xl);background:var(--surface);border:1px solid var(--line)}
+.logo-box{display:grid;place-items:center;min-height:160px;padding:var(--s-300);border-radius:var(--r-2xl);background:#fff;border:1px solid var(--line)}
+.logo-box img{max-height:112px;width:auto}
+.wordmark{display:none;align-items:center;gap:var(--s-100);direction:ltr;color:var(--brand)}
+.wordmark img{width:56px;height:56px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-200)}
+.stat{padding:var(--s-200);border-radius:var(--r-2xl);background:#fff;border:1px solid var(--line);display:grid;gap:var(--s-50)}
+.stat .heading-3{color:var(--brand)}
+.about-copy{display:grid;gap:var(--s-200)}
+.about-copy .role{color:var(--brand)}
+.checks{display:grid;gap:var(--s-100);margin-block-start:var(--s-75)}
+.checks li{display:flex;gap:var(--s-100);align-items:center}
+.checks .ph-fill{color:var(--cta);font-size:1.25rem}
+
+/* ---------- Videos ---------- */
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-200)}
+.video{position:relative;aspect-ratio:16/9;border-radius:var(--r-2xl);overflow:hidden;border:0;padding:0;cursor:pointer;background:#000}
+.video img{width:100%;height:100%;object-fit:cover;transition:transform 500ms var(--ease),opacity 300ms var(--ease);opacity:.9}
+.video:hover img{transform:scale(1.04);opacity:1}
+.video .play{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:var(--r-full);display:grid;place-items:center;background:rgba(255,255,255,.92);color:var(--ink);font-size:1.5rem;transition:transform 500ms var(--ease)}
+.video:hover .play{transform:scale(1.08)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* ---------- FAQ ---------- */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--s-700);align-items:start}
+.faq-list{display:grid;gap:var(--s-100)}
+.faq-list details{border:1px solid var(--line);border-radius:var(--r-2xl);background:#fff;transition:border-color 300ms var(--ease)}
+.faq-list details[open]{border-color:#C5D3E6}
+.faq-list summary{display:flex;justify-content:space-between;align-items:center;gap:var(--s-200);padding:var(--s-200) var(--s-300);cursor:pointer;list-style:none;border-radius:var(--r-2xl)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary .ph{font-size:1.25rem;transition:transform 500ms var(--ease);flex:none}
+.faq-list details[open] summary .ph{transform:rotate(45deg)}
+.faq-list .a{padding:0 var(--s-300) var(--s-300);color:var(--muted)}
+
+/* ---------- Final CTA and contact ---------- */
+.cta-card{display:grid;gap:var(--s-400);padding:var(--s-700);border-radius:var(--r-3xl);background:var(--ink);color:#fff}
+.cta-card .section-head{margin:0}
+.cta-card .section-head p{color:#A9B3C2}
+.cta-card .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.24)}
+.cta-card .btn-ghost:hover{border-color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-200)}
+.addr{display:grid;gap:var(--s-200);align-content:start;padding:var(--s-300);border-radius:var(--r-2xl);background:#1F1F1F}
+.addr .row{display:flex;gap:var(--s-100);align-items:flex-start}
+.addr .ph{font-size:1.5rem;color:var(--sky)}
+.addr p.muted{color:#A9B3C2}
+.map{border-radius:var(--r-2xl);overflow:hidden;min-height:240px;background:#1F1F1F}
+.map iframe{width:100%;height:100%;min-height:240px;border:0;display:block}
+.socials{display:flex;flex-wrap:wrap;gap:var(--s-75)}
+.socials a{display:inline-flex;align-items:center;gap:var(--s-75);padding:var(--s-75) var(--s-100);border-radius:var(--r-xl);text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.16);transition:border-color 300ms var(--ease),transform 500ms var(--ease)}
+.socials a:hover{border-color:#fff;transform:translateY(-2px)}
+.socials .ph{font-size:1.25rem}
+
+/* ---------- Footer ---------- */
+footer{padding-block:var(--s-600);border-top:1px solid var(--line)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--s-200)}
+.foot nav{display:flex;flex-wrap:wrap;gap:var(--s-200)}
+.foot a,.foot button{color:var(--muted);text-decoration:none;background:none;border:0;padding:0;font:inherit;cursor:pointer;transition:color 300ms var(--ease)}
+.foot a:hover,.foot button:hover{color:var(--ink)}
+
+/* ---------- Mobile sticky CTA ---------- */
+.mbar{display:none}
+
+/* ---------- Accessibility panel and statement ---------- */
+dialog{max-width:640px;width:calc(100% - var(--s-400));max-height:85vh;overflow:auto;border:1px solid var(--line);border-radius:var(--r-3xl);padding:var(--s-400);color:var(--ink)}
+dialog::backdrop{background:rgba(11,18,32,.5);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+dialog h2{margin-block-end:var(--s-200)}
+dialog h3{margin-block:var(--s-300) var(--s-75)}
+dialog ul{list-style:disc;padding-inline-start:var(--s-300)}
+dialog .x{float:inline-end}
+html.a-c{--ink:#000;--muted:#000;--line:#000;--brand:#0000C8}
+html.a-c .tagline .w{color:#000}
+html.a-l main a,html.a-l footer a{text-decoration:underline!important;outline:2px solid #FFBF00;outline-offset:2px}
+html.a-a *,html.a-a *::before,html.a-a *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+
+/* ---------- Scroll reveals (skill B7) ---------- */
+.js .reveal{opacity:0;transform:translateY(32px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1080px){
+  .nav-links{display:none}
+  .toggle{display:inline-grid}
+  .nav-cta{display:none}
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .hero-grid,.about-grid,.faq-grid{grid-template-columns:1fr}
+  .hero-visual{max-width:360px}
+  .about-grid{gap:var(--s-600)}
+  .faq-grid{gap:var(--s-300)}
+}
+@media (max-width:767px){
+  .container{padding-inline:var(--s-200)}
+  section{padding-block:var(--s-700)}
+  .nav{top:var(--s-100);padding-inline:var(--s-100)}
+  .nav-bar{width:100%;justify-content:space-between;gap:var(--s-100)}
+  .hero{padding-block:calc(var(--s-900) + var(--s-200)) var(--s-600)}
+  .hero h1.heading-1{font-size:2.25rem;line-height:2.5rem}
+  :lang(ar) .hero h1.heading-1{line-height:1.35}
+  .section-head h2.heading-3,.faq-grid h2.heading-3{font-size:1.875rem;line-height:2.25rem}
+  .tagline.heading-2{font-size:1.875rem;line-height:2.25rem}
+  :lang(ar) .tagline.heading-2{line-height:1.4}
+  .hero-actions{flex-direction:column;align-items:stretch;width:100%}
+  .hero-actions .btn{width:100%}
+  .call-link{justify-content:center}
+  .chip-a{inset-inline-start:calc(-1 * var(--s-100))}
+  .chip-b{inset-inline-end:calc(-1 * var(--s-100))}
+  .trust{padding-block-end:var(--s-700)}
+  .trust ul,.cards,.steps,.videos,.contact-grid{grid-template-columns:1fr}
+  .tagline-sec{padding-block:var(--s-900)}
+  .cta-card{padding:var(--s-400) var(--s-300)}
+  .cta-card .hero-actions .btn{width:100%}
+  .foot{flex-direction:column;align-items:flex-start}
+  body{padding-block-end:var(--s-900)}
+  .mbar{display:grid;grid-template-columns:1fr auto;gap:var(--s-75);position:fixed;inset-inline:0;bottom:0;z-index:30;padding:var(--s-100) var(--s-200) calc(var(--s-100) + env(safe-area-inset-bottom,0px));
+    background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line);
+    transform:translateY(100%);transition:transform 500ms var(--ease)}
+  .mbar.show{transform:none}
+  .mbar .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-property:opacity,color,background-color!important;animation:none!important}
+  .js .reveal{transform:none}
+  .panel nav a,.panel .panel-cta{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip button-sm" href="#main" data-i="skip"></a>
+
+<!-- Floating navigation -->
+<header class="nav" id="nav">
+  <div class="nav-bar">
+    <a class="brand title-2" href="#top" aria-label="Misim.me"><img src="assets/logo-icon.png" alt="" width="32" height="32"><b>Misim<span>.</span>me</b></a>
+    <nav class="nav-links title-4" id="navLinks" data-i-attr="aria-label:nav">
+      <a href="#services" data-i="n_services"></a>
+      <a href="#how" data-i="n_how"></a>
+      <a href="#about" data-i="n_about"></a>
+      <a href="#videos" data-i="n_videos"></a>
+      <a href="#faq" data-i="n_faq"></a>
+      <a href="#contact" data-i="n_contact"></a>
+    </nav>
+    <div class="nav-tools">
+      <div class="pop">
+        <button class="icon-btn" id="a11yBtn" aria-expanded="false" aria-controls="a11yMenu" data-i-attr="aria-label:aw"><i class="ph ph-person-arms-spread" aria-hidden="true"></i></button>
+        <div class="menu body-6" id="a11yMenu" role="group">
+          <p class="label caption-3" data-i="aw"></p>
+          <button data-f="f1"><span data-i="f1"></span><i class="ph ph-text-aa" aria-hidden="true"></i></button>
+          <button data-f="f2"><span data-i="f2"></span><i class="ph ph-text-aa" aria-hidden="true"></i></button>
+          <button data-f="c" aria-pressed="false"><span data-i="c"></span><i class="ph ph-circle-half" aria-hidden="true"></i></button>
+          <button data-f="l" aria-pressed="false"><span data-i="l"></span><i class="ph ph-link" aria-hidden="true"></i></button>
+          <button data-f="a" aria-pressed="false"><span data-i="a"></span><i class="ph ph-pause" aria-hidden="true"></i></button>
+          <button data-f="rs"><span data-i="rs"></span><i class="ph ph-arrow-counter-clockwise" aria-hidden="true"></i></button>
+          <button data-open-stmt><span data-i="stl"></span><i class="ph ph-file-text" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="pop">
+        <button class="icon-btn button-sm" id="langBtn" aria-expanded="false" aria-controls="langMenu" data-i-attr="aria-label:lang"><i class="ph ph-globe-simple" aria-hidden="true"></i><span id="langCode">AR</span></button>
+        <div class="menu body-6" id="langMenu" role="group">
+          <button data-lang="ar" lang="ar"><span>العربية</span><span class="caption-3">AR</span></button>
+          <button data-lang="he" lang="he"><span>עברית</span><span class="caption-3">HE</span></button>
+          <button data-lang="en" lang="en"><span>English</span><span class="caption-3">EN</span></button>
+          <button data-lang="ru" lang="ru"><span>Русский</span><span class="caption-3">RU</span></button>
+        </div>
+      </div>
+      <a class="btn btn-primary button-sm nav-cta wa"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><span>WhatsApp</span></a>
+      <button class="icon-btn toggle" id="toggle" aria-expanded="false" aria-controls="panel" data-i-attr="aria-label:menu"><span class="bars" aria-hidden="true"><i></i><i></i></span></button>
+    </div>
+  </div>
+</header>
+<div class="panel" id="panel" hidden>
+  <nav class="heading-5" data-i-attr="aria-label:nav">
+    <a href="#services"><span data-i="n_services"></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+    <a href="#how"><span data-i="n_how"></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+    <a href="#about"><span data-i="n_about"></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+    <a href="#videos"><span data-i="n_videos"></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+    <a href="#faq"><span data-i="n_faq"></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+    <a href="#contact"><span data-i="n_contact"></span><i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+  </nav>
+  <a class="btn btn-primary button-lg btn-lg panel-cta wa"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><span data-i="cta"></span></a>
+</div>
+
+<main id="main" tabindex="-1">
+
+  <!-- 1. Hero -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow caption-1"><i class="ph-fill ph-seal-check" aria-hidden="true"></i><span data-i="eyebrow"></span></p>
+        <h1 class="heading-1" data-i-br="h1"></h1>
+        <p class="sub title-1" data-i="sub"></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary button-lg btn-lg wa" id="heroCta"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><span data-i="cta"></span></a>
+          <a class="call-link body-2" href="tel:+97248306000"><i class="ph ph-phone" aria-hidden="true"></i><span data-i="or_call"></span> <b>04 830 6000</b></a>
+        </div>
+        <ul class="proof caption-1">
+          <li><i class="ph-fill ph-medal" aria-hidden="true"></i><span data-i="proof1"></span></li>
+          <li><i class="ph-fill ph-map-pin" aria-hidden="true"></i><span data-i="proof2"></span></li>
+        </ul>
+      </div>
+      <figure class="hero-visual">
+        <div class="photo"><img id="heroPhoto" src="assets/mohammad.jpg" width="520" height="581" alt="" fetchpriority="high"></div>
+        <figcaption class="chip chip-a">
+          <span class="ico"><i class="ph ph-user-circle-check" aria-hidden="true"></i></span>
+          <span><span class="title-3" style="display:block" data-i="ah"></span><span class="caption-1 muted" data-i="role_short"></span></span>
+        </figcaption>
+        <div class="chip chip-b" aria-hidden="true">
+          <span class="heading-5 num">21+</span><span class="caption-1 muted" data-i="years_label"></span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <section class="trust" aria-label="Trust">
+    <div class="container">
+      <ul class="reveal">
+        <li class="title-3"><i class="ph ph-users-three" aria-hidden="true"></i><span data-i="t1"></span></li>
+        <li class="title-3"><i class="ph ph-handshake" aria-hidden="true"></i><span data-i="t2"></span></li>
+        <li class="title-3"><i class="ph ph-heart" aria-hidden="true"></i><span data-i="t3"></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2. Services / benefits -->
+  <section class="surface" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow caption-3" data-i="n_services"></p>
+        <h2 class="heading-3" data-i="svc_h"></h2>
+        <p class="title-2" data-i="svc_sub"></p>
+      </div>
+      <div class="cards reveal" id="cards"></div>
+    </div>
+  </section>
+
+  <!-- Tagline reveal (B11) -->
+  <section class="tagline-sec" aria-label="Tagline">
+    <div class="container">
+      <p class="tagline heading-2" id="tagline"></p>
+    </div>
+  </section>
+
+  <!-- 3. How it works -->
+  <section class="surface" id="how">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow caption-3" data-i="n_how"></p>
+        <h2 class="heading-3" data-i="how_h"></h2>
+      </div>
+      <ol class="steps reveal" id="steps" style="padding:0;list-style:none"></ol>
+    </div>
+  </section>
+
+  <!-- 4. Proof: about -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-card reveal">
+        <div class="logo-box">
+          <img id="logoImg" src="assets/logo-ar.png" alt="Misim.me" width="560" height="220">
+          <div class="wordmark heading-3" id="wordmark"><img src="assets/logo-icon.png" alt="" width="56" height="56">Misim<span style="color:var(--sky)">.</span>me</div>
+        </div>
+        <div class="stats">
+          <div class="stat"><span class="heading-3">21+</span><span class="caption-1 muted" data-i="years_label"></span></div>
+          <div class="stat"><span class="heading-3" data-i="dist_val"></span><span class="caption-1 muted" data-i="dist_label"></span></div>
+        </div>
+      </div>
+      <div class="about-copy reveal">
+        <p class="eyebrow caption-3" data-i="about_eyebrow"></p>
+        <h2 class="heading-3" data-i="ah"></h2>
+        <p class="role title-2" data-i="role"></p>
+        <p class="body-3 muted" data-i="ap"></p>
+        <p class="body-3 muted" data-i="ap2"></p>
+        <ul class="checks body-2">
+          <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i><span data-i="t1"></span></li>
+          <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i><span data-i="t2"></span></li>
+          <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i><span data-i="t3"></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="surface" id="videos">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow caption-3" data-i="n_videos"></p>
+        <h2 class="heading-3" data-i="vid_h"></h2>
+        <p class="title-2" data-i="vid_sub"></p>
+      </div>
+      <div class="videos reveal">
+        <button class="video" data-yt="nrIQoXMCjLE"><img src="https://i.ytimg.com/vi/nrIQoXMCjLE/hqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="ph-fill ph-play" aria-hidden="true"></i></span></button>
+        <button class="video" data-yt="6u-FieHqv_Q"><img src="https://i.ytimg.com/vi/6u-FieHqv_Q/hqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="ph-fill ph-play" aria-hidden="true"></i></span></button>
+        <button class="video" data-yt="UIzsKW1chUk"><img src="https://i.ytimg.com/vi/UIzsKW1chUk/hqdefault.jpg" alt="" loading="lazy"><span class="play"><i class="ph-fill ph-play" aria-hidden="true"></i></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FAQ -->
+  <section id="faq">
+    <div class="container faq-grid">
+      <div class="section-head reveal" style="margin:0">
+        <p class="eyebrow caption-3" data-i="n_faq"></p>
+        <h2 class="heading-3" data-i="faq_h"></h2>
+      </div>
+      <div class="faq-list reveal" id="faqList"></div>
+    </div>
+  </section>
+
+  <!-- 6. Final CTA + contact -->
+  <section id="contact" style="padding-block-start:0">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="section-head">
+          <h2 class="heading-3" data-i="cta_h"></h2>
+          <p class="title-2" data-i="cta_sub"></p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary button-lg btn-lg wa"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><span data-i="cta"></span></a>
+          <a class="btn btn-ghost button-lg btn-lg" href="tel:+97248306000"><i class="ph ph-phone" aria-hidden="true"></i><span data-i="call_label"></span></a>
+        </div>
+        <div class="contact-grid">
+          <div class="addr">
+            <div class="row"><i class="ph ph-map-pin" aria-hidden="true"></i><div><p class="title-3" data-i="adr"></p><p class="body-6 muted" data-i="loc"></p></div></div>
+            <a class="btn btn-ghost button-md" href="https://waze.com/ul/hsvc1gndqf" target="_blank" rel="noopener" style="justify-self:start"><i class="ph ph-navigation-arrow" aria-hidden="true"></i><span data-i="waze"></span></a>
+            <p class="caption-3 muted" data-i="follow" style="margin-block-start:var(--s-75)"></p>
+            <div class="socials body-4">
+              <a href="https://facebook.com/misim.me" target="_blank" rel="noopener"><i class="ph ph-facebook-logo" aria-hidden="true"></i>Facebook</a>
+              <a href="https://instagram.com/misim.me" target="_blank" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i>Instagram</a>
+              <a href="https://instagram.com/mmasalha" target="_blank" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i><span data-i="ig_personal"></span></a>
+              <a href="https://tiktok.com/@mmasalha" target="_blank" rel="noopener"><i class="ph ph-tiktok-logo" aria-hidden="true"></i>TikTok</a>
+              <a href="https://www.youtube.com/@masalha" target="_blank" rel="noopener"><i class="ph ph-youtube-logo" aria-hidden="true"></i>YouTube</a>
+              <a href="https://share.google/QjwShEblttuVf0MwU" target="_blank" rel="noopener"><i class="ph ph-google-logo" aria-hidden="true"></i>Google</a>
+            </div>
+          </div>
+          <div class="map"><iframe id="map" title="Google Maps: Marj Ibn Amer 35, Nazareth" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Marj+Ibn+Amer+35,+Nazareth&output=embed"></iframe></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container foot body-6">
+    <a class="brand title-3" href="#top"><img src="assets/logo-icon.png" alt="" width="32" height="32"><b>Misim<span>.</span>me</b></a>
+    <nav data-i-attr="aria-label:nav">
+      <a href="#services" data-i="n_services"></a>
+      <a href="#about" data-i="n_about"></a>
+      <a href="#faq" data-i="n_faq"></a>
+      <button type="button" data-open-stmt data-i="stl"></button>
+    </nav>
+    <p class="muted">© 2026 Misim.me · <span data-i="rights"></span></p>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="btn btn-primary button-md wa"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><span data-i="cta"></span></a>
+  <a class="btn btn-ghost button-md" href="tel:+97248306000" data-i-attr="aria-label:call_label"><i class="ph ph-phone" aria-hidden="true"></i></a>
+</div>
+
+<dialog id="stmt" aria-labelledby="stmtH">
+  <button class="btn btn-ghost button-sm x" id="stmtX" data-i="cl"></button>
+  <h2 class="heading-5" id="stmtH" data-i="st_t"></h2>
+  <div id="stmtB" class="body-6"></div>
+</dialog>
+
+<script>
+document.documentElement.classList.add("js");
+const ICONS=["ph-user","ph-buildings","ph-hand-heart","ph-magnifying-glass","ph-scales","ph-calculator","ph-compass"];
+const T={
+en:{
+ title:"Misim.me | Audit and tax planning in Nazareth",
+ desc:"Bookkeeping, audits and tax planning for freelancers, companies and non profits in Nazareth. Over 21 years guiding businesses. Message us on WhatsApp.",
+ skip:"Skip to content",nav:"Main navigation",menu:"Menu",lang:"Language",
+ n_services:"Services",n_how:"How it works",n_about:"About",n_videos:"Videos",n_faq:"FAQ",n_contact:"Contact",
+ eyebrow:"Audit and tax planning firm in Nazareth",
+ h1:"Audit and tax planning\nfor businesses that want peace of mind",
+ sub:"Bookkeeping, audits and tax planning for freelancers, companies and non profits. One experienced auditor who deals with the authorities for you.",
+ cta:"Message us on WhatsApp",or_call:"or call",call_label:"Call 04 830 6000",
+ proof1:"21+ years guiding businesses",proof2:"200 m from the Nazareth tax offices",
+ ah:"Mohammad Masalha",role:"Auditor, senior economist and financing expert",role_short:"Auditor and economist",
+ years_label:"years guiding businesses",dist_label:"from the tax offices",dist_val:"200 m",
+ t1:"Professional team",t2:"Strong ties with banks and institutions",t3:"Personal, friendly service",
+ svc_h:"Everything your books need, in one office",
+ svc_sub:"From monthly bookkeeping to representation before the Tax Authority, we cover the full cycle.",
+ s:["Bookkeeping for freelancers","Bookkeeping for companies","Bookkeeping for non profits and associations, including Section 46","Audit of company financial statements","Representation before the Tax Authority, VAT, income tax and National Insurance","Tax consulting and planning","Guidance in your dealings with the tax authorities"],
+ lt:"Loans to start your business",lp:"Direct, fast work with the Economic Center for Entrepreneurship Development to secure startup loans on excellent terms, sometimes completely interest free.",
+ tag:"You focus on growing the business.\nWe handle the numbers and the tax authorities.",
+ how_h:"From first message to books in order",
+ steps:[["Send us a message","Tell us on WhatsApp or by phone what your business needs. We reply personally."],["Get a clear plan","We review your situation and recommend the bookkeeping, audit or tax steps that fit."],["We take it from there","We keep your books in order and represent you before the Tax Authority, VAT and National Insurance."]],
+ about_eyebrow:"Who you will work with",
+ ap:"Over 21 years of experience guiding businesses with managerial, financial, marketing and technology support.",
+ ap2:"Wide relationships with financial and government institutions and banks.",
+ vid_h:"Watch and learn",vid_sub:"Short explainers from Mohammad on taxes, licensing and support for business owners. Videos are in Arabic.",play:"Play video",
+ faq_h:"Questions we hear often",
+ faq:[["Who do you work with?","Freelancers, companies, non profits and associations, from opening a business to the annual reports."],["Do you handle Section 46 for non profits?","Yes. We provide bookkeeping for non profits and associations, including Section 46 requirements."],["Can you represent me before the tax authorities?","Yes. We represent clients before the Tax Authority, VAT, income tax and National Insurance."],["Can you help me get a loan to open a business?","Yes. We work directly with the Economic Center for Entrepreneurship Development to secure startup loans on excellent terms, sometimes with no interest at all."],["Where is the office?","35 Marj Ibn Amer St., Nazareth, about 200 meters from the Income Tax and Land Taxation offices."],["How do I get started?","Send us a WhatsApp message or call 04 830 6000 and we will set up a first conversation about your needs."]],
+ cta_h:"Let’s talk about your business",cta_sub:"Send a message now and get a personal answer from Mohammad’s office.",
+ adr:"35 Marj Ibn Amer St., Nazareth",loc:"About 200 meters from the Income Tax and Land Taxation offices, for easy access and fast handling.",
+ waze:"Navigate with Waze",follow:"Follow us",ig_personal:"Mohammad on Instagram",rights:"All rights reserved.",
+ msg:"Hi, I'd like to get in touch regarding your firm's services"},
+ar:{
+ title:"ميسيم.مي | تدقيق حسابات وتخطيط ضريبي في الناصرة",
+ desc:"إدارة حسابات وتدقيق وتخطيط ضريبي للمستقلّين والشركات والجمعيّات في الناصرة. أكثر من 21 عامًا في مرافقة المصالح. راسلونا عبر واتساب.",
+ skip:"تخطّي إلى المحتوى",nav:"التنقّل الرئيسي",menu:"القائمة",lang:"اللغة",
+ n_services:"خدماتنا",n_how:"كيف نعمل",n_about:"من نحن",n_videos:"فيديو",n_faq:"أسئلة شائعة",n_contact:"تواصل",
+ eyebrow:"مكتب تدقيق حسابات وتخطيط ضريبي في الناصرة",
+ h1:"تدقيق حسابات وتخطيط ضريبي\nلمصالح تبحث عن راحة البال",
+ sub:"إدارة حسابات وتدقيق وتخطيط ضريبي للمستقلّين والشركات والجمعيّات. مدقّق حسابات صاحب خبرة يتعامل مع السلطات بدلًا عنكم.",
+ cta:"راسلونا عبر واتساب",or_call:"أو اتّصلوا",call_label:"اتّصلوا 04 830 6000",
+ proof1:"أكثر من 21 عامًا في مرافقة المصالح",proof2:"على بعد 200 متر من مكاتب الضرائب في الناصرة",
+ ah:"محمد مصالحة",role:"مدقّق حسابات، اقتصادي كبير وخبير تمويل",role_short:"مدقّق حسابات واقتصادي",
+ years_label:"عامًا في مرافقة المصالح",dist_label:"من مكاتب الضرائب",dist_val:"200 م",
+ t1:"طاقم مهني",t2:"علاقات قويّة مع البنوك والمؤسّسات",t3:"معاملة شخصيّة ووديّة",
+ svc_h:"كل ما تحتاجه حساباتكم، في مكتب واحد",
+ svc_sub:"من إدارة الحسابات الشهريّة حتى التمثيل أمام سلطة الضرائب، نغطّي الدورة كاملة.",
+ s:["إدارة حسابات للمستقلّين","إدارة حسابات للشركات","إدارة حسابات للجمعيّات والمؤسّسات غير الربحيّة، يشمل بند 46","تدقيق التقارير الماليّة للشركات","التمثيل أمام سلطة الضرائب، ضريبة القيمة المضافة، ضريبة الدخل والتأمين الوطني","استشارة وتخطيط ضريبي","إرشاد ومرافقة في التعامل مع سلطة الضرائب"],
+ lt:"قروض لإقامة المصالح والأعمال",lp:"تعامل مباشر وسريع مع المركز الاقتصادي لتطوير المبادرات لتحصيل قروض لإقامة مصالح وأعمال، بشروط ممتازة تصل أحيانًا إلى قروض بدون فائدة بتاتًا.",
+ tag:"أنتم تركّزون على تطوير مصلحتكم.\nونحن نهتمّ بالأرقام وبسلطات الضرائب.",
+ how_h:"من أوّل رسالة حتى حسابات مرتّبة",
+ steps:[["أرسلوا لنا رسالة","أخبرونا عبر واتساب أو الهاتف بما تحتاجه مصلحتكم، ونردّ عليكم شخصيًّا."],["احصلوا على خطّة واضحة","نراجع وضعكم ونوصي بخطوات إدارة الحسابات أو التدقيق أو التخطيط الضريبي المناسبة لكم."],["ونحن نتابع عنكم","نرتّب حساباتكم ونمثّلكم أمام سلطة الضرائب وضريبة القيمة المضافة والتأمين الوطني."]],
+ about_eyebrow:"مع من ستعملون",
+ ap:"خبرة أكثر من 21 عامًا في مرافقة المصالح والأعمال: مرافقة إداريّة، ماليّة، تسويقيّة وتكنولوجيّة.",
+ ap2:"صاحب علاقات واسعة مع المؤسّسات الماليّة والرّسميّة والبنوك.",
+ vid_h:"شاهدوا وتعلّموا",vid_sub:"شروحات قصيرة من محمد حول الضرائب والترخيص ودعم أصحاب المصالح.",play:"تشغيل الفيديو",
+ faq_h:"أسئلة نسمعها كثيرًا",
+ faq:[["مع من تعملون؟","مع المستقلّين والشركات والجمعيّات والمؤسّسات غير الربحيّة، من افتتاح المصلحة حتى التقارير السنويّة."],["هل تهتمّون ببند 46 للجمعيّات؟","نعم. نقدّم إدارة حسابات للجمعيّات والمؤسّسات غير الربحيّة بما يشمل متطلّبات بند 46."],["هل يمكنكم تمثيلي أمام سلطات الضرائب؟","نعم. نمثّل زبائننا أمام سلطة الضرائب وضريبة القيمة المضافة وضريبة الدخل والتأمين الوطني."],["هل تساعدون في الحصول على قرض لافتتاح مصلحة؟","نعم. نتعامل مباشرة مع المركز الاقتصادي لتطوير المبادرات لتحصيل قروض بشروط ممتازة، وأحيانًا بدون فائدة بتاتًا."],["أين يقع المكتب؟","شارع مرج ابن عامر 35، النّاصرة، على بعد نحو 200 متر من مكاتب ضريبة الدخل وضريبة الأراضي."],["كيف أبدأ؟","أرسلوا لنا رسالة واتساب أو اتّصلوا على 04 830 6000، وسنرتّب معكم محادثة أولى حول احتياجاتكم."]],
+ cta_h:"لنتحدّث عن مصلحتكم",cta_sub:"أرسلوا رسالة الآن واحصلوا على ردّ شخصي من مكتب محمد.",
+ adr:"شارع مرج ابن عامر 35، النّاصرة",loc:"على بعد نحو 200 متر من مكاتب ضريبة الدخل وضريبة الأراضي، ما يوفّر سهولة الوصول وسرعة إنجاز المعاملات.",
+ waze:"افتحوا في Waze",follow:"تابعونا",ig_personal:"محمد على إنستغرام",rights:"جميع الحقوق محفوظة.",
+ msg:"سلامات، معني تتواصلوا معي بخصوص خدمات مكتبكم"},
+he:{
+ title:"מיסים.מי | ביקורת חשבונות ותכנון מס בנצרת",
+ desc:"הנהלת חשבונות, ביקורת ותכנון מס לעצמאים, חברות ועמותות בנצרת. 21+ שנות ליווי עסקים. שלחו לנו וואטסאפ.",
+ skip:"דלג לתוכן",nav:"ניווט ראשי",menu:"תפריט",lang:"שפה",
+ n_services:"שירותים",n_how:"איך זה עובד",n_about:"אודות",n_videos:"וידאו",n_faq:"שאלות נפוצות",n_contact:"צור קשר",
+ eyebrow:"משרד ביקורת חשבונות ותכנון מס בנצרת",
+ h1:"ביקורת חשבונות ותכנון מס\nלעסקים שרוצים שקט נפשי",
+ sub:"הנהלת חשבונות, ביקורת ותכנון מס לעצמאים, חברות ועמותות. מבקר חשבונות מנוסה שמתנהל מול הרשויות בשבילכם.",
+ cta:"שלחו לנו וואטסאפ",or_call:"או התקשרו",call_label:"התקשרו 04 830 6000",
+ proof1:"21+ שנות ליווי עסקים",proof2:"200 מטר ממשרדי המס בנצרת",
+ ah:"מוחמד מסאלחה",role:"מבקר חשבונות, כלכלן בכיר ומומחה מימון",role_short:"מבקר חשבונות וכלכלן",
+ years_label:"שנות ליווי עסקים",dist_label:"ממשרדי המס",dist_val:"200 מ׳",
+ t1:"צוות מקצועי",t2:"קשרים חזקים עם בנקים ומוסדות",t3:"יחס אישי וידידותי",
+ svc_h:"כל מה שהחשבונות שלכם צריכים, במשרד אחד",
+ svc_sub:"מהנהלת חשבונות שוטפת ועד ייצוג מול רשות המסים, אנחנו מכסים את כל המעגל.",
+ s:["הנהלת חשבונות לעצמאים","הנהלת חשבונות לחברות","הנהלת חשבונות לעמותות ולמלכ\"רים, כולל סעיף 46","ביקורת דוחות כספיים לחברות","ייצוג מול רשות המסים, מע\"מ, מס הכנסה וביטוח לאומי","ייעוץ ותכנון מס","ליווי וייעוץ בהתנהלות מול רשויות המס"],
+ lt:"הלוואות להקמת עסקים",lp:"עבודה ישירה ומהירה מול המרכז הכלכלי לפיתוח יזמות עסקית לקבלת הלוואות להקמת עסקים, בתנאים מצוינים ולעיתים אף ללא ריבית כלל.",
+ tag:"אתם מתמקדים בצמיחת העסק.\nאנחנו דואגים למספרים ולרשויות המס.",
+ how_h:"מההודעה הראשונה ועד ספרים מסודרים",
+ steps:[["שלחו הודעה","ספרו לנו בוואטסאפ או בטלפון מה העסק שלכם צריך, ונחזור אליכם באופן אישי."],["קבלו תוכנית ברורה","נבחן את המצב שלכם ונמליץ על צעדי הנהלת חשבונות, ביקורת או תכנון מס שמתאימים לכם."],["אנחנו ממשיכים מכאן","נסדר את הספרים ונייצג אתכם מול רשות המסים, מע\"מ וביטוח לאומי."]],
+ about_eyebrow:"עם מי תעבדו",
+ ap:"ניסיון של 21+ שנים בליווי עסקים: ליווי ניהולי, פיננסי, שיווקי וטכנולוגי.",
+ ap2:"בעל קשרים רחבים עם מוסדות פיננסיים ורשמיים ובנקים.",
+ vid_h:"צפו ולמדו",vid_sub:"הסברים קצרים של מוחמד על מיסים, רישוי ותמיכה בבעלי עסקים. הסרטונים בערבית.",play:"הפעלת הסרטון",
+ faq_h:"שאלות שאנחנו שומעים הרבה",
+ faq:[["עם מי אתם עובדים?","עם עצמאים, חברות, עמותות ומלכ\"רים, מפתיחת העסק ועד הדוחות השנתיים."],["אתם מטפלים בסעיף 46 לעמותות?","כן. אנחנו מספקים הנהלת חשבונות לעמותות ולמלכ\"רים, כולל דרישות סעיף 46."],["אתם יכולים לייצג אותי מול רשויות המס?","כן. אנחנו מייצגים לקוחות מול רשות המסים, מע\"מ, מס הכנסה וביטוח לאומי."],["אתם עוזרים לקבל הלוואה לפתיחת עסק?","כן. אנחנו עובדים ישירות מול המרכז הכלכלי לפיתוח יזמות עסקית להשגת הלוואות בתנאים מצוינים, ולעיתים אף ללא ריבית כלל."],["איפה המשרד?","רחוב מרג' אבן עאמר 35, נצרת, כמאתיים מטר ממשרדי מס הכנסה ומיסוי מקרקעין."],["איך מתחילים?","שלחו לנו הודעת וואטסאפ או התקשרו למספר 04 830 6000, ונקבע שיחה ראשונה על הצרכים שלכם."]],
+ cta_h:"בואו נדבר על העסק שלכם",cta_sub:"שלחו הודעה עכשיו וקבלו מענה אישי מהמשרד של מוחמד.",
+ adr:"רחוב מרג' אבן עאמר 35, נצרת",loc:"כמאתיים מטר ממשרדי מס הכנסה ומיסוי מקרקעין, לנגישות נוחה וטיפול יעיל מול הרשויות.",
+ waze:"נווטו עם Waze",follow:"עקבו אחרינו",ig_personal:"מוחמד באינסטגרם",rights:"כל הזכויות שמורות.",
+ msg:"שלום, אשמח ליצור קשר בנוגע לשירותי המשרד שלכם"},
+ru:{
+ title:"Misim.me | Аудит и налоговое планирование в Назарете",
+ desc:"Бухгалтерия, аудит и налоговое планирование для самозанятых, компаний и НКО в Назарете. Более 21 года сопровождения бизнеса. Напишите нам в WhatsApp.",
+ skip:"Перейти к содержимому",nav:"Главная навигация",menu:"Меню",lang:"Язык",
+ n_services:"Услуги",n_how:"Как мы работаем",n_about:"О нас",n_videos:"Видео",n_faq:"Вопросы",n_contact:"Контакты",
+ eyebrow:"Аудиторская фирма в Назарете",
+ h1:"Аудит и налоговое планирование\nдля бизнеса, которому важно спокойствие",
+ sub:"Бухгалтерия, аудит и налоговое планирование для самозанятых, компаний и НКО. Опытный аудитор, который ведёт дела с госорганами за вас.",
+ cta:"Написать в WhatsApp",or_call:"или позвоните",call_label:"Позвонить 04 830 6000",
+ proof1:"Более 21 года сопровождения бизнеса",proof2:"200 м от налоговых управлений Назарета",
+ ah:"Мухаммад Масальха",role:"Аудитор, старший экономист и эксперт по финансированию",role_short:"Аудитор и экономист",
+ years_label:"лет сопровождения бизнеса",dist_label:"от налоговых управлений",dist_val:"200 м",
+ t1:"Профессиональная команда",t2:"Сильные связи с банками и учреждениями",t3:"Личное и дружелюбное отношение",
+ svc_h:"Всё для вашей бухгалтерии в одном офисе",
+ svc_sub:"От ежемесячного учёта до представительства в налоговом управлении: мы закрываем весь цикл.",
+ s:["Бухгалтерия для самозанятых","Бухгалтерия для компаний","Бухгалтерия для НКО и ассоциаций, включая статью 46","Аудит финансовой отчётности компаний","Представительство в налоговом управлении, НДС, подоходном налоге и нацстраховании","Налоговое консультирование и планирование","Сопровождение во взаимодействии с налоговыми органами"],
+ lt:"Кредиты для открытия бизнеса",lp:"Прямая и быстрая работа с Экономическим центром развития предпринимательства для получения кредитов на открытие бизнеса на отличных условиях, иногда вовсе без процентов.",
+ tag:"Вы развиваете бизнес.\nМы берём на себя цифры и налоговые органы.",
+ how_h:"От первого сообщения до порядка в учёте",
+ steps:[["Напишите нам","Расскажите в WhatsApp или по телефону, что нужно вашему бизнесу. Мы ответим лично."],["Получите понятный план","Мы изучим ситуацию и предложим подходящие шаги по бухгалтерии, аудиту или налогам."],["Дальше работаем мы","Ведём учёт и представляем вас в налоговом управлении, НДС и нацстраховании."]],
+ about_eyebrow:"С кем вы будете работать",
+ ap:"Более 21 года опыта сопровождения бизнеса: управленческое, финансовое, маркетинговое и технологическое сопровождение.",
+ ap2:"Широкие связи с финансовыми и государственными учреждениями и банками.",
+ vid_h:"Смотрите и узнавайте",vid_sub:"Короткие объяснения от Мухаммада о налогах, лицензировании и поддержке предпринимателей. Видео на арабском.",play:"Смотреть видео",
+ faq_h:"Частые вопросы",
+ faq:[["С кем вы работаете?","С самозанятыми, компаниями, НКО и ассоциациями, от открытия бизнеса до годовой отчётности."],["Вы ведёте статью 46 для НКО?","Да. Мы ведём бухгалтерию НКО и ассоциаций, включая требования статьи 46."],["Можете представлять меня в налоговых органах?","Да. Мы представляем клиентов в налоговом управлении, НДС, подоходном налоге и нацстраховании."],["Поможете получить кредит на открытие бизнеса?","Да. Мы напрямую работаем с Экономическим центром развития предпринимательства и помогаем получить кредиты на отличных условиях, иногда вовсе без процентов."],["Где находится офис?","ул. Мардж Ибн Амер 35, Назарет, примерно в 200 метрах от отделений подоходного налога и налога на недвижимость."],["С чего начать?","Напишите нам в WhatsApp или позвоните по номеру 04 830 6000, и мы договоримся о первом разговоре."]],
+ cta_h:"Давайте обсудим ваш бизнес",cta_sub:"Напишите сейчас и получите личный ответ от офиса Мухаммада.",
+ adr:"ул. Мардж Ибн Амер 35, Назарет",loc:"Примерно в 200 метрах от налоговых управлений. Удобно добираться и быстро решать вопросы.",
+ waze:"Открыть в Waze",follow:"Мы в соцсетях",ig_personal:"Мухаммад в Instagram",rights:"Все права защищены.",
+ msg:"Здравствуйте, хочу связаться по поводу услуг вашей фирмы"}
+};
+/* Accessibility strings and statement (content kept from the live site) */
+const A={
+ar:{aw:"أدوات الوصول",f1:"تكبير الخط",f2:"تصغير الخط",c:"تباين عالٍ",l:"تمييز الروابط",a:"إيقاف الحركة",rs:"إعادة تعيين",stl:"بيان إمكانيّة الوصول",cl:"إغلاق",st_t:"بيان إمكانيّة الوصول",
+ body:"<p>يولي مكتب ميسيم.مي أهمية كبيرة لتقديم خدمة متساوية ومتاحة للجميع، بمن فيهم الأشخاص ذوو الإعاقة. أُجريت على الموقع تعديلات وصول بهدف الالتزام بأنظمة المساواة في حقوق الأشخاص ذوي الإعاقة (تعديلات الوصول للخدمة) 2013 وبالمعيار الإسرائيلي ת״י 5568 (المبني على WCAG) بمستوى AA.</p><h3 class='title-2'>التعديلات التي أُجريت</h3><ul><li>تنقّل كامل بلوحة المفاتيح ورابط «تخطّي إلى المحتوى»</li><li>أدوات وصول: تكبير وتصغير الخط، تباين عالٍ، تمييز الروابط وإيقاف الحركة</li><li>بنية عناوين ومناطق صفحة واضحة</li><li>نص بديل للصور</li><li>دعم العربية والعبرية والإنجليزية والروسية مع اتجاه الكتابة الصحيح</li></ul><h3 class='title-2'>التواصل بخصوص إمكانيّة الوصول</h3><p>منسّق الوصول: محمّد مصالحة · <a href='mailto:accessibility@misim.me'>accessibility@misim.me</a> · 04 830 6000</p><p class='muted'>آخر تحديث: 23.11.2026</p>"},
+he:{aw:"כלי נגישות",f1:"הגדלת טקסט",f2:"הקטנת טקסט",c:"ניגודיות גבוהה",l:"הדגשת קישורים",a:"עצירת אנימציות",rs:"איפוס",stl:"הצהרת נגישות",cl:"סגירה",st_t:"הצהרת נגישות",
+ body:"<p>פירמת מיסים.מי רואה חשיבות רבה במתן שירות שוויוני ונגיש לכלל הציבור, כולל אנשים עם מוגבלות. בוצעו באתר התאמות נגישות במטרה לעמוד בתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע״ג 2013, ובתקן הישראלי ת״י 5568 (המבוסס על WCAG) ברמה AA.</p><h3 class='title-2'>התאמות שבוצעו</h3><ul><li>ניווט מלא במקלדת וקישור ״דלג לתוכן״</li><li>כלי נגישות: הגדלה והקטנת טקסט, ניגודיות גבוהה, הדגשת קישורים ועצירת אנימציות</li><li>מבנה כותרות סמנטי ואזורי עמוד</li><li>טקסט חלופי לתמונות</li><li>תמיכה בעברית, ערבית, אנגלית ורוסית כולל כיוון כתיבה נכון</li></ul><h3 class='title-2'>פנייה בנושא נגישות</h3><p>רכז הנגישות: מוחמד מסאלחה · <a href='mailto:accessibility@misim.me'>accessibility@misim.me</a> · 04 830 6000</p><p class='muted'>עודכן לאחרונה: 23.11.2026</p>"},
+en:{aw:"Accessibility tools",f1:"Increase text",f2:"Decrease text",c:"High contrast",l:"Highlight links",a:"Stop animations",rs:"Reset",stl:"Accessibility statement",cl:"Close",st_t:"Accessibility statement",
+ body:"<p>Misim.me places great importance on providing equal, accessible service to everyone, including people with disabilities. Accessibility adjustments were made to meet the Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 2013, and Israeli Standard SI 5568 (based on WCAG) at level AA.</p><h3 class='title-2'>Adjustments made</h3><ul><li>Full keyboard navigation and a skip to content link</li><li>Accessibility tools: text size, high contrast, link highlighting and stopping animations</li><li>Semantic headings and page landmarks</li><li>Alternative text for images</li><li>Arabic, Hebrew, English and Russian with correct text direction</li></ul><h3 class='title-2'>Accessibility inquiries</h3><p>Coordinator: Mohammad Masalha · <a href='mailto:accessibility@misim.me'>accessibility@misim.me</a> · 04 830 6000</p><p class='muted'>Last updated: 23.11.2026</p>"},
+ru:{aw:"Инструменты доступности",f1:"Увеличить текст",f2:"Уменьшить текст",c:"Высокий контраст",l:"Выделить ссылки",a:"Остановить анимацию",rs:"Сбросить",stl:"Заявление о доступности",cl:"Закрыть",st_t:"Заявление о доступности",
+ body:"<p>Misim.me уделяет большое внимание равному и доступному обслуживанию всех, включая людей с ограниченными возможностями. На сайте выполнены адаптации для соответствия Правилам равных прав людей с ограниченными возможностями (адаптация доступности услуг), 2013, и израильскому стандарту SI 5568 (на основе WCAG) уровня AA.</p><h3 class='title-2'>Выполненные адаптации</h3><ul><li>Полная навигация с клавиатуры и ссылка «Перейти к содержимому»</li><li>Инструменты: размер текста, высокий контраст, выделение ссылок и остановка анимации</li><li>Семантические заголовки и области страницы</li><li>Альтернативный текст для изображений</li><li>Арабский, иврит, английский и русский с правильным направлением текста</li></ul><h3 class='title-2'>Обращения по доступности</h3><p>Координатор: Мухаммад Масальха · <a href='mailto:accessibility@misim.me'>accessibility@misim.me</a> · 04 830 6000</p><p class='muted'>Последнее обновление: 23.11.2026</p>"}
+};
+const LOGO={ar:"assets/logo-ar.png",he:"assets/logo-he.png"};
+const LANGS=["ar","he","en","ru"];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let LANG;
+
+function pickLang(){
+  const q=new URLSearchParams(location.search).get("lang");
+  if(LANGS.includes(q))return q;
+  try{const s=localStorage.getItem("lang");if(LANGS.includes(s))return s}catch(e){}
+  return "ar";
+}
+function setMeta(sel,val){const m=$(sel);if(m)m.setAttribute("content",val)}
+
+function render(l){
+  LANG=l;const d=T[l],a=A[l],h=document.documentElement;
+  h.lang=l;h.dir=(l==="ar"||l==="he")?"rtl":"ltr";
+  const all={...d,...a};
+  const tel=s=>s.replace(/04 830 6000/g,'<bdi dir="ltr">04 830 6000</bdi>');
+  $$("[data-i]").forEach(e=>{const v=all[e.dataset.i];if(v!=null)e.innerHTML=tel(esc(v))});
+  $$("[data-i-br]").forEach(e=>{e.innerHTML=esc(all[e.dataset.iBr]).replace(/\n/g,"<br>")});
+  $$("[data-i-attr]").forEach(e=>{const[at,k]=e.dataset.iAttr.split(":");e.setAttribute(at,all[k])});
+  document.title=d.title;
+  setMeta('meta[name="description"]',d.desc);setMeta('meta[property="og:title"]',d.title);setMeta('meta[property="og:description"]',d.desc);
+  $("#cards").innerHTML=d.s.map((x,i)=>`<article class="card"><span class="ico"><i class="ph ${ICONS[i]}" aria-hidden="true"></i></span><h3 class="title-2">${esc(x)}</h3></article>`).join("")
+    +`<article class="card feature"><span class="ico"><i class="ph ph-rocket-launch" aria-hidden="true"></i></span><h3 class="title-2">${esc(d.lt)}</h3><p class="body-6">${esc(d.lp)}</p></article>`;
+  $("#steps").innerHTML=d.steps.map((s,i)=>`<li class="step"><span class="n body-4">${i+1}</span><h3 class="heading-6">${esc(s[0])}</h3><p class="body-3 muted">${esc(s[1])}</p></li>`).join("");
+  $("#faqList").innerHTML=d.faq.map(f=>`<details><summary class="title-3"><span>${esc(f[0])}</span><i class="ph ph-plus" aria-hidden="true"></i></summary><p class="a body-3">${tel(esc(f[1]))}</p></details>`).join("");
+  $("#tagline").innerHTML=d.tag.split("\n").map(line=>line.split(" ").map(w=>`<span class="w">${esc(w)}</span>`).join(" ")).join("<br>");
+  tagWords=$$("#tagline .w");updateTagline();
+  $("#stmtB").innerHTML=tel(a.body);
+  $("#heroPhoto").alt=`${d.ah}, ${d.role}`;
+  $$(".video").forEach((v,i)=>v.setAttribute("aria-label",`${d.play} ${i+1}`));
+  const lg=$("#logoImg");if(LOGO[l]){lg.src=LOGO[l];lg.style.display="block";$("#wordmark").style.display="none"}else{lg.style.display="none";$("#wordmark").style.display="flex"}
+  const wa="https://wa.me/97248306000?text="+encodeURIComponent(d.msg);
+  $$(".wa").forEach(x=>{x.href=wa;x.target="_blank";x.rel="noopener"});
+  $("#langCode").textContent=l.toUpperCase();$("#langBtn").setAttribute("aria-label",`${l.toUpperCase()} ${d.lang||""}`.trim());
+  $$("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
+  try{localStorage.setItem("lang",l)}catch(e){}
+  const u=new URL(location.href);u.searchParams.set("lang",l);history.replaceState(null,"",u);
+}
+
+/* Popovers */
+function bindPop(btn,menu){
+  btn.addEventListener("click",e=>{e.stopPropagation();const open=!menu.classList.contains("open");closePops();if(open){menu.classList.add("open");btn.setAttribute("aria-expanded","true")}});
+}
+function closePops(){$$(".menu.open").forEach(m=>m.classList.remove("open"));$$("[aria-controls$='Menu']").forEach(b=>b.setAttribute("aria-expanded","false"))}
+bindPop($("#langBtn"),$("#langMenu"));bindPop($("#a11yBtn"),$("#a11yMenu"));
+document.addEventListener("click",e=>{if(!e.target.closest(".menu"))closePops()});
+$$("[data-lang]").forEach(b=>b.addEventListener("click",()=>{render(b.dataset.lang);closePops()}));
+
+/* Mobile menu: full height panel, staggered links (60ms steps, capped at 400ms) */
+const nav=$("#nav"),panel=$("#panel"),tg=$("#toggle");
+$$("#panel nav a, #panel .panel-cta").forEach((a,i)=>a.style.transitionDelay=Math.min(i*60,400)+"ms");
+function setPanel(open){
+  nav.classList.toggle("is-open",open);tg.setAttribute("aria-expanded",open);
+  if(open){panel.hidden=false;requestAnimationFrame(()=>panel.classList.add("open"));document.body.style.overflow="hidden"}
+  else{panel.classList.remove("open");document.body.style.overflow="";setTimeout(()=>{if(!panel.classList.contains("open"))panel.hidden=true},300)}
+}
+tg.addEventListener("click",()=>setPanel(!nav.classList.contains("is-open")));
+$$("#panel a").forEach(a=>a.addEventListener("click",()=>setPanel(false)));
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closePops();if(nav.classList.contains("is-open"))setPanel(false)}});
+
+/* Current section in nav */
+const links=$$("#navLinks a");
+const secIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.setAttribute("aria-current",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+$$("main section[id]").forEach(s=>secIO.observe(s));
+
+/* Scroll reveals, once per section */
+const revIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");revIO.unobserve(e.target)}}),{threshold:.12});
+$$(".reveal").forEach(e=>revIO.observe(e));
+
+/* Tagline reveal: words light up one by one, rAF throttled */
+let tagWords=[],ticking=false;
+const reduced=matchMedia("(prefers-reduced-motion: reduce)");
+function updateTagline(){
+  ticking=false;
+  if(reduced.matches||document.documentElement.classList.contains("a-a")){tagWords.forEach(w=>w.classList.add("on"));return}
+  const r=$("#tagline").getBoundingClientRect(),vh=innerHeight;
+  const p=Math.min(1,Math.max(0,(vh*0.8-r.top)/(r.height+vh*0.35)));
+  const n=Math.round(p*tagWords.length);
+  tagWords.forEach((w,i)=>w.classList.toggle("on",i<n));
+}
+addEventListener("scroll",()=>{if(!ticking){ticking=true;requestAnimationFrame(updateTagline)}},{passive:true});
+addEventListener("resize",updateTagline);
+
+/* Mobile sticky CTA appears once the hero CTA leaves the screen */
+const mbar=$("#mbar");
+new IntersectionObserver(([e])=>mbar.classList.toggle("show",!e.isIntersecting&&e.boundingClientRect.top<0)).observe($("#heroCta"));
+
+/* Lightweight YouTube facades */
+$$(".video").forEach(v=>v.addEventListener("click",()=>{
+  const f=document.createElement("iframe");
+  f.src=`https://www.youtube-nocookie.com/embed/${v.dataset.yt}?autoplay=1`;f.allow="accelerometer;autoplay;encrypted-media;picture-in-picture";f.allowFullscreen=true;f.title=v.getAttribute("aria-label");
+  const w=document.createElement("div");w.className="video";w.appendChild(f);
+  v.replaceWith(w);
+}));
+
+/* Accessibility tools */
+let S={f:0,c:0,l:0,a:0};try{Object.assign(S,JSON.parse(localStorage.getItem("a11y")||"{}"))}catch(e){}
+function applyA11y(){
+  const h=document.documentElement;["c","l","a"].forEach(k=>{h.classList.toggle("a-"+k,!!S[k]);const b=$(`[data-f="${k}"]`);if(b)b.setAttribute("aria-pressed",!!S[k])});
+  h.style.fontSize=(100+S.f*12.5)+"%";try{localStorage.setItem("a11y",JSON.stringify(S))}catch(e){}updateTagline();
+}
+$$("[data-f]").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.f;
+  if(k==="f1")S.f=Math.min(4,S.f+1);else if(k==="f2")S.f=Math.max(-1,S.f-1);else if(k==="rs")S={f:0,c:0,l:0,a:0};else S[k]=S[k]?0:1;applyA11y()}));
+const dlg=$("#stmt");$$("[data-open-stmt]").forEach(b=>b.addEventListener("click",()=>{closePops();dlg.showModal()}));$("#stmtX").addEventListener("click",()=>dlg.close());
+
+render(pickLang());applyA11y();
+</script>
+</body>
+</html>
